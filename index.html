@@ -78,12 +78,12 @@
           </article>
           <article class="evidence-panel">
             <h3>Problem 3: Hospital discharge</h3>
-            <div class="viz-scope">2021 Swedish multicenter chart review, n=699 adults age 65+; shared EHR</div>
-            <div class="metric-pair"><div class="metric-chip"><strong>60%</strong><span>had adequate medication follow-up requests</span></div><div class="metric-chip"><strong>40%</strong><span>did not meet that measure</span></div></div>
-            <div class="viz-row"><div class="viz-label"><span>Adequate follow-up requests</span><strong>60%</strong></div><div class="viz-track"><span class="viz-fill" style="width:60%"></span></div></div>
-            <div class="viz-row"><div class="viz-label"><span>Related revisit among inadequately followed patients</span><strong>14%</strong></div><div class="viz-track"><span class="viz-fill" style="width:14%"></span></div></div>
-            <p class="viz-caveat">The 60% and 14% figures use different denominators. Swedish shared-EHR setting; U.S. prevalence and current scale need validation.</p>
-            <a class="viz-source" href="https://doi.org/10.1186/s12877-021-02564-5" target="_blank" rel="noopener">BMC Geriatrics source ↗</a>
+            <div class="viz-scope">JAMA Health Forum 2024; 79.1M eligible U.S. Medicare discharges, 2010–2019</div>
+            <div class="metric-pair"><div class="metric-chip"><strong>38.8%</strong><span>received primary-care follow-up within 14 days in 2019</span></div><div class="metric-chip"><strong>61.2%</strong><span>did not meet that primary-care follow-up measure</span></div></div>
+            <div class="viz-row"><div class="viz-label"><span>Timely primary-care follow-up, 2010</span><strong>31.5%</strong></div><div class="viz-track"><span class="viz-fill" style="width:31.5%"></span></div></div>
+            <div class="viz-row"><div class="viz-label"><span>Timely primary-care follow-up, 2019</span><strong>38.8%</strong></div><div class="viz-track"><span class="viz-fill" style="width:38.8%"></span></div></div>
+            <p class="viz-caveat">National U.S. evidence of a follow-up completion gap; it does not identify failed hospital handoff coordination as the cause.</p>
+            <a class="viz-source" href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2817437" target="_blank" rel="noopener">JAMA Health Forum source ↗</a>
           </article>
         </div>
         <div class="note"><p><strong>Interpretation:</strong> These visuals establish burden and workflow risk. They do not show which problem is larger or prove that a new AI product will solve it.</p></div>
@@ -193,14 +193,14 @@
       <div class="content wide">
         <h2><span class="teal">Problem 3:</span> An incomplete discharge handoff can leave critical follow-up undone after the patient gets home.</h2>
         <div class="five">
-          <div class="point"><strong>1</strong><span class="label">Cause and effect</span><p><strong>Cause:</strong> Discharge follow-up depends on several teams, clear instructions, and confirmed ownership; even a shared EHR does not guarantee complete follow-up requests. <strong>Effect:</strong> Open handoffs can delay follow-up, leave medication instructions unclear, and contribute to avoidable return care.</p></div>
+          <div class="point"><strong>1</strong><span class="label">Cause and effect</span><p><strong>Candidate cause:</strong> Discharge follow-up depends on several teams, clear instructions, capacity, and confirmed ownership. <strong>Effect:</strong> When follow-up is not completed, needed care may be delayed; the specific causes must be measured locally.</p></div>
           <div class="point"><strong>2</strong><span class="label">Target user</span><p>A discharge planner or nurse case manager sending adult medical patients home.</p></div>
           <div class="point"><strong>3</strong><span class="label">Candidate bottleneck</span><p>Confirming that the receiving organization accepted responsibility for the next operational step.</p></div>
-          <div class="point"><strong>4</strong><span class="label">Evidence</span><p><a class="evidence-link" href="https://doi.org/10.1186/s12877-021-02564-5" target="_blank" rel="noopener" aria-label="Read the BMC Geriatrics discharge follow-up study"><strong class="evidence-stat">60%</strong><span class="evidence-note">had adequate medication follow-up requests in a 2021 Swedish review of 699 older patients using a shared EHR.</span><span class="evidence-source">READ MORE ↗</span></a></p></div>
+          <div class="point"><strong>4</strong><span class="label">Evidence</span><p><a class="evidence-link" href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2817437" target="_blank" rel="noopener" aria-label="Read the JAMA Health Forum Medicare discharge follow-up study"><strong class="evidence-stat">38.8%</strong><span class="evidence-note">received primary-care follow-up within 14 days in 2019; national analysis of 79.1 million eligible Medicare discharges.</span><span class="evidence-source">READ MORE ↗</span></a></p></div>
           <div class="point"><strong>5</strong><span class="label">Success metric</span><p>Closed-loop handoff completion rate within an approved follow-up window.</p></div>
         </div>
       </div>
-      <div class="citation"><span>10 / 14</span> | <a href="https://doi.org/10.1186/s12877-021-02564-5">BMC Geriatrics 2021 multicenter chart review</a>: 699 Swedish patients age 65+ across three hospitals sharing an EHR with primary care. Among patients with inadequate requests, 14% had a related revisit within 6 months. U.S. prevalence and current scale remain unvalidated.</div>
+      <div class="citation"><span>10 / 14</span> | <a href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2817437">Anderson et al., JAMA Health Forum, 2024</a>: 79,125,965 eligible Medicare discharges from 2010–2019; timely primary-care follow-up rose from 31.5% to 38.8%. This measures completed visits, not handoff quality or cause.</div>
     </section>
 
     <section class="slide" data-title="Discharge journey">
@@ -229,7 +229,7 @@
         <h2>Different strengths point to different next tests.</h2>
         <table class="compare"><thead><tr><th>Decision lens</th><th>Prior authorization</th><th>Claims denials</th><th>Discharge handoff</th></tr></thead><tbody>
           <tr class="recommended"><td>Current position</td><td><strong>Leading candidate</strong></td><td>Strong alternative</td><td>Provisional</td></tr>
-          <tr><td>Problem evidence</td><td>Strong; partly self-reported</td><td>Strong for marketplace plans</td><td>Credible but older</td></tr>
+          <tr><td>Problem evidence</td><td>Strong; partly self-reported</td><td>Strong for marketplace plans</td><td>Strong U.S. scale; data end in 2019</td></tr>
           <tr><td>Public data</td><td>Moderate</td><td>Strongest of the three</td><td>Limited; synthetic needed</td></tr>
           <tr><td>Agentic potential</td><td>Policy interpretation and evidence reconciliation</td><td>Ambiguous denial interpretation and routing</td><td>Cross-organization ownership and exceptions</td></tr>
           <tr><td>Main risk</td><td>Payer-specific logic and 2027 API changes</td><td>Insurance complexity and crowded market</td><td>Clinical proximity and stale evidence</td></tr>
