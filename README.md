@@ -12,6 +12,10 @@ These are documented problems and bounded product hypotheses for team discussion
 
 The current recommendation is to validate prior authorization preparation first through a small payer-policy comparison and conversations with 3–5 prior-authorization specialists.
 
+## Focused presentation
+
+`prior-authorization.html` is a separate eight-slide presentation focused only on Problem 1. The original three-concept presentation remains in `index.html`.
+
 ## View locally
 
 Open `index.html` in a browser. Use the left and right arrow keys to move through the presentation.
