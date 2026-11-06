@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Prior Authorization Preparation: Human and AI Roles",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "lanes": [
+    { "id": "human", "label": "Human: clinician and PA specialist" },
+    { "id": "agent", "label": "AI agent: policy and evidence matching" },
+    { "id": "controls", "label": "Software controls: validation and audit" }
+  ],
+  "phases": [
+    { "id": "intake", "label": "Human intake", "fromCol": 0, "toCol": 1 },
+    { "id": "prepare", "label": "AI-assisted preparation", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "approve", "label": "Human decision", "fromCol": 4, "toCol": 5, "variant": "security" }
+  ],
+  "mainPath": ["order", "openCase", "matchEvidence", "validateDraft", "humanReview", "submitRequest"],
+  "semanticChecks": {
+    "allowedRoots": ["order"],
+    "allowedTerminals": ["submitRequest"],
+    "requiredPaths": [
+      { "from": "order", "to": "submitRequest" }
+    ]
+  },
+  "nodes": [
+    { "id": "order", "lane": "human", "col": 0, "type": "external", "label": "Order", "sublabel": "service or medication", "tag": "HUMAN" },
+    { "id": "openCase", "lane": "human", "col": 1, "type": "external", "label": "Open PA case", "sublabel": "confirm plan and scope", "tag": "HUMAN" },
+    { "id": "matchEvidence", "lane": "agent", "col": 2, "type": "backend", "label": "Match evidence", "sublabel": "cited checklist + gaps", "tag": "AI AGENT" },
+    { "id": "validateDraft", "lane": "controls", "col": 3, "type": "security", "label": "Validate draft", "sublabel": "check sources + rules", "tag": "SOFTWARE" },
+    { "id": "humanReview", "lane": "human", "col": 4, "type": "external", "label": "Review", "sublabel": "correct or approve", "tag": "HUMAN" },
+    { "id": "submitRequest", "lane": "human", "col": 5, "type": "external", "label": "Submit request", "sublabel": "authorized staff action", "tag": "HUMAN" }
+  ],
+  "edges": [
+    { "from": "order", "to": "openCase", "label": "approved order", "role": "main" },
+    { "from": "openCase", "to": "matchEvidence", "label": "authorized case data", "role": "main", "variant": "emphasis" },
+    { "from": "matchEvidence", "to": "validateDraft", "label": "checklist + cited evidence", "role": "main", "variant": "emphasis" },
+    { "from": "validateDraft", "to": "humanReview", "label": "validated draft or flagged gaps", "role": "main", "variant": "security" },
+    { "from": "humanReview", "to": "submitRequest", "label": "staff approval", "role": "main", "variant": "security" }
+  ]
+}
