@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Prior Authorization Preparation: Human and AI Roles",
+    "quality_profile": "showcase",
+    "output": "diagrams/prior-authorization-human-ai.html"
+  },
+  "lanes": [
+    { "id": "human", "label": "Human: clinician and PA specialist" },
+    { "id": "agent", "label": "One AI agent: policy and evidence preparation" },
+    { "id": "controls", "label": "Software controls: validation and audit" }
+  ],
+  "phases": [
+    { "id": "intake", "label": "Human intake", "fromCol": 0, "toCol": 1 },
+    { "id": "preparation", "label": "AI-assisted preparation", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "decision", "label": "Human decision", "fromCol": 4, "toCol": 5, "variant": "security" }
+  ],
+  "mainPath": ["order", "openCase", "readPolicy", "matchEvidence", "validateDraft", "review", "submit"],
+  "semanticChecks": {
+    "allowedRoots": ["order"],
+    "allowedTerminals": ["submit"],
+    "requiredPaths": [
+      { "from": "order", "to": "submit" }
+    ]
+  },
+  "nodes": [
+    { "id": "order", "lane": "human", "col": 0, "type": "external", "label": "Order", "sublabel": "service or medication", "tag": "HUMAN", "width": 126 },
+    { "id": "openCase", "lane": "human", "col": 1, "type": "external", "label": "Open PA case", "sublabel": "confirm plan and scope", "tag": "HUMAN", "width": 126 },
+    { "id": "readPolicy", "lane": "agent", "col": 2, "type": "backend", "label": "Read payer policy", "sublabel": "build cited checklist", "tag": "ONE AI AGENT", "width": 134 },
+    { "id": "matchEvidence", "lane": "agent", "col": 3, "type": "backend", "label": "Match evidence", "sublabel": "cite matches + flag gaps", "tag": "SAME AI AGENT", "width": 134 },
+    { "id": "validateDraft", "lane": "controls", "col": 4, "type": "security", "label": "Validate draft", "sublabel": "check fields, sources + rules", "tag": "SOFTWARE", "width": 134 },
+    { "id": "review", "lane": "human", "col": 4, "type": "external", "label": "Review", "sublabel": "correct or approve", "tag": "HUMAN", "width": 126 },
+    { "id": "submit", "lane": "human", "col": 5, "type": "external", "label": "Submit request", "sublabel": "authorized staff action", "tag": "HUMAN", "width": 126 }
+  ],
+  "edges": [
+    { "id": "ordered-case", "from": "order", "to": "openCase", "label": "approved order" },
+    { "id": "case-policy", "from": "openCase", "to": "readPolicy", "label": "plan + case details", "variant": "emphasis" },
+    { "id": "policy-evidence", "from": "readPolicy", "to": "matchEvidence", "label": "cited checklist", "variant": "emphasis" },
+    { "id": "evidence-validation", "from": "matchEvidence", "to": "validateDraft", "label": "draft + cited evidence", "variant": "emphasis" },
+    { "id": "validation-review", "from": "validateDraft", "to": "review", "label": "validated draft or flagged gaps", "variant": "security", "role": "return" },
+    { "id": "review-submit", "from": "review", "to": "submit", "label": "staff approval", "variant": "security" }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "One AI agent, two preparation tasks",
+      "items": [
+        "Read the payer policy and build a cited checklist",
+        "Match chart evidence and flag missing information"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "People keep authority",
+      "items": [
+        "Software validates fields, sources, and stopping rules",
+        "Authorized staff review and submit the request"
+      ]
+    }
+  ]
+}
