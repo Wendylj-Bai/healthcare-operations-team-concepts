@@ -99,3 +99,30 @@ Desktop screenshots (1440×900) of slides 4, 9, 14, and 15 checked visually. Pho
 - Manual upload friction and HIPAA/BAA burden: already listed as challenges on slide 15.
 - Hallucination and fail-closed behavior: covered on slides 13 and 16.
 - Synthetic data only: covered on slides 11, 17, and 18.
+
+## Workflow diagram and slide 11 update (2026-11-06)
+
+**Why:** The slide 12 diagram was a straight line (order → read policy → match evidence → validate → review → submit). Slides 13 and 17 promise re-searching, retries, and escalation, and both Gemini reviews asked whether this is "just a document pipeline". Missing evidence also had no path back to people.
+
+**What changed:**
+
+| File | Change |
+|---|---|
+| `diagrams/prior-authorization-human-ai.workflow.json` | Added edge `validation-retry` from `validateDraft` to `matchEvidence` (label "gaps: search again", role `return`, `toSide: right`). Updated card text: "Match chart evidence; re-check notes when gaps or conflicts appear" and "Clinicians add missing records; staff review and submit". |
+| `diagrams/prior-authorization-human-ai.html`, `.visual-check.1440x900.light.png`, `.visual-check.json` | Regenerated with Archify (`deliver workflow … --quality showcase`, then `visual-check`). Slide 12 uses the 1440×900 light PNG. |
+| `specifications/prior-authorization-human-ai.workflow.json` | **Was stale** (old single agent node, from before commit 0cc8418). Now a copy of the diagrams version. Treat `diagrams/…workflow.json` as the source of truth. |
+| `prior-authorization.html` slide 11 | Caption adds: "If evidence is missing or conflicting, the agent searches the chart again; real gaps go to the clinician to add records before staff review." |
+
+**Tried and rejected:** a separate human node "Add documentation" with its own return edges. It widened the diagram so node text fell below 6px at 1440×900 (Archify `composition/desktop-readability` error). Pinning the retry edge `fromSide: left` was rejected (`workflow/explicit-pin-conflict`). The clinician step is therefore shown in the slide 11 caption and the diagram's card, not as a node.
+
+**Verification:**
+- Archify showcase validation: all 9 checks pass, 0 errors, 0 warnings. `deliver` ok.
+- `visual-check`: pass at 1440×900, 1600×1000, 1920×1080, 2048×1320.
+- Visual review of the PNG: the retry loop and the "validated draft or flagged gaps" path no longer share a line.
+- Full deck review: all 18 slides screenshotted at 1440×900 with no overflow. Footers run 1–18. The one cross-reference ("slide 7" on slide 15) is correct. All 11 external links return HTTP 200.
+
+**Known, pre-existing, not changed:**
+- The `.coral` text-color quirk (red body text in `.card.coral` / `.note.coral`, e.g. slides 8, 9).
+- Slide 7's "The 30% figure" card refers to a number not shown in that slide's stat row.
+- The deck still uses the 2024 AMA survey; switching to the 2025 survey is an open decision for Wendyl (see above).
+- Untracked Archify sidecars (dark and 2048 PNGs, `visual-check.html`) are left uncommitted.
