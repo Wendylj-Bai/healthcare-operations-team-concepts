@@ -14,8 +14,12 @@ The current recommendation is to validate prior authorization preparation first 
 
 ## Focused presentation
 
-`prior-authorization.html` is a separate sixteen-slide presentation focused only on Problem 1. The original three-concept presentation remains in `index.html`.
+`prior-authorization.html` is a separate eighteen-slide presentation focused only on Problem 1. The original three-concept presentation remains in `index.html`.
 
 ## View locally
 
 Open `index.html` in a browser. Use the left and right arrow keys to move through the presentation.
+
+## Latest changes
+
+See [docs/prior-authorization-update-2026-11-06.md](docs/prior-authorization-update-2026-11-06.md) for the 2026-11-06 update log: what changed in `prior-authorization.html`, sources verified, open decisions (including the newer 2025 AMA survey), and claims to avoid.
