@@ -34,7 +34,7 @@
         <p class="lead">A focused look at the documented problem, one possible clinic-side bottleneck, and a safe way to test agentic AI.</p>
         <p class="prepared">Prepared by Wendyl Jaca</p>
       </div>
-      <div class="citation"><span>1 / 13</span> | Problem research and concept framing only. Product demand and agentic advantage remain unvalidated.</div>
+      <div class="citation"><span>1 / 14</span> | Problem research and concept framing only. Product demand and agentic advantage remain unvalidated.</div>
     </section>
 
     <section class="slide" data-title="Why this matters">
@@ -49,7 +49,7 @@
         </div>
         <div class="note"><p><strong>What this evidence establishes:</strong> Across 1,000 practicing physicians, prior authorization is consistently reported as delaying care, consuming clinical time, and increasing healthcare use. This is strong evidence of a widespread problem.</p></div>
       </div>
-      <div class="citation"><span>2 / 13</span> | <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">AMA 2024 survey</a>, n=1,000 practicing U.S. physicians who complete PAs. Self-reported.</div>
+      <div class="citation"><span>2 / 14</span> | <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">AMA 2024 survey</a>, n=1,000 practicing U.S. physicians who complete PAs. Self-reported.</div>
     </section>
 
     <section class="slide" data-title="Clinical impact">
@@ -68,7 +68,7 @@
           <article class="impact-metric"><strong>8%</strong><span>reported disability, permanent damage, congenital anomaly, birth defect, or death</span></article>
         </div>
       </div>
-      <div class="citation"><span>3 / 13</span> | Physician-reported experiences and perceptions from the AMA survey; individual outcomes were not independently verified.</div>
+      <div class="citation"><span>3 / 14</span> | Physician-reported experiences and perceptions from the AMA survey; individual outcomes were not independently verified.</div>
     </section>
 
     <section class="slide" data-title="Operational and denial impact">
@@ -89,7 +89,7 @@
         </div>
         <p class="ai-warning"><strong>Physician impact:</strong> 89% reported increased burnout. Separately, 61% reported concern that augmented intelligence could increase PA denial rates. Our concept therefore supports clinic preparation and keeps consequential decisions with people.</p>
       </div>
-      <div class="citation"><span>4 / 13</span> | Survey questions use different respondent groups and time frames. Percentages should not be combined into one rate.</div>
+      <div class="citation"><span>4 / 14</span> | Survey questions use different respondent groups and time frames. Percentages should not be combined into one rate.</div>
     </section>
 
     <section class="slide" data-title="Cost and resource impact">
@@ -109,7 +109,7 @@
         </div>
         <div class="note"><p><strong>Evidence boundary:</strong> These findings show reported time and resource effects. The survey does not calculate one total dollar cost of PA.</p></div>
       </div>
-      <div class="citation"><span>5 / 13</span> | Physician-reported resource and healthcare-use effects; not a direct economic cost estimate.</div>
+      <div class="citation"><span>5 / 14</span> | Physician-reported resource and healthcare-use effects; not a direct economic cost estimate.</div>
     </section>
 
     <section class="slide" data-title="What the survey supports">
@@ -128,7 +128,32 @@
           <div class="card amber"><span class="label">Important detail</span><h3>The 30% figure concerns PA information</h3><p>Nearly one in three reported that PA requirement information in the EHR or e-prescribing system was rarely or never accurate. It does not mean the patient chart itself was inaccurate.</p></div>
         </div>
       </div>
-      <div class="citation"><span>6 / 13</span> | <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">AMA 2024 survey</a>. Prescription and medical-service questions used different respondent groups.</div>
+      <div class="citation"><span>6 / 14</span> | <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">AMA 2024 survey</a>. Prescription and medical-service questions used different respondent groups.</div>
+    </section>
+
+    <section class="slide" data-title="Government evidence">
+      <div class="topline"><span>Government evidence</span><span>What CMS and HHS-OIG add</span></div>
+      <div class="content wide">
+        <h2>Government reviews reinforce the problem and refine our hypothesis.</h2>
+        <div class="two">
+          <article class="card">
+            <span class="label">CMS | Fiscal Year 2024</span>
+            <h3>Early review can expose documentation issues before the final claim</h3>
+            <p>CMS describes prior authorization and pre-claim review as ways to verify coverage and documentation earlier. In several targeted Medicare programs, CMS identified additional documentation not supplied during initial review as a common reason appealed claims were later overturned.</p>
+            <a class="source-link" href="https://www.cms.gov/files/document/pre-claim-review-program-statistics-document-fy-24.pdf" target="_blank" rel="noopener">Open CMS FY2024 PDF</a>
+            <p class="small" style="margin:12px 0 0"><strong>Boundary:</strong> These statistics cover specific Medicare Fee-for-Service programs, not every payer or PA request.</p>
+          </article>
+          <article class="card coral">
+            <span class="label">HHS-OIG | April 2022</span>
+            <h3>Some denied requests met Medicare coverage rules</h3>
+            <p>OIG estimated that 13% of denied Medicare Advantage PA requests in its sample met Medicare coverage rules. It found use of additional plan criteria and cases where plans requested unnecessary documentation or called records insufficient even when reviewers found the existing record adequate.</p>
+            <a class="source-link" href="https://oig.hhs.gov/reports/all/2022/some-medicare-advantage-organization-denials-of-prior-authorization-requests-raise-concerns-about-beneficiary-access-to-medically-necessary-care/" target="_blank" rel="noopener">Open HHS-OIG Report</a>
+            <p class="small" style="margin:12px 0 0"><strong>Boundary:</strong> The review examined denials from 15 large Medicare Advantage organizations during one week in 2019.</p>
+          </article>
+        </div>
+        <div class="note coral"><p><strong>Design implication:</strong> The agent should not only find missing documents. It should cite the governing requirement, distinguish plan criteria from Medicare rules, preserve the evidence trail, and flag conflicts for human review.</p></div>
+      </div>
+      <div class="citation"><span>7 / 14</span> | Official CMS and HHS-OIG evidence; each source covers a defined Medicare population and should not be generalized to all insurers.</div>
     </section>
 
     <section class="slide" data-title="Evidence boundary">
@@ -141,7 +166,7 @@
         </div>
         <div class="note coral"><p><strong>Our question:</strong> Can a clinic prepare a complete, traceable request faster and with fewer corrections while healthcare staff remain in control?</p></div>
       </div>
-      <div class="citation"><span>7 / 13</span> | Industry-level problem evidence. The clinic-side bottleneck remains a team hypothesis requiring workflow data and user interviews.</div>
+      <div class="citation"><span>8 / 14</span> | Industry-level problem evidence. The clinic-side bottleneck remains a team hypothesis requiring workflow data and user interviews.</div>
     </section>
 
     <section class="slide" data-title="Possible bottleneck">
@@ -157,7 +182,7 @@
         <p class="flow-note">Today, staff may handle all four steps. In the proposed concept, AI assists only with steps 2 and 3.</p>
         <div class="hypothesis"><strong>Candidate bottleneck</strong>Staff may lose time translating changing payer policies and searching scattered records for the required evidence. The team still needs to measure how often this causes rework.</div>
       </div>
-      <div class="citation"><span>8 / 13</span> | The clinic controls preparation, not the payer's coverage decision. Use public policies and synthetic patient records for a demo.</div>
+      <div class="citation"><span>9 / 14</span> | The clinic controls preparation, not the payer's coverage decision. Use public policies and synthetic patient records for a demo.</div>
     </section>
 
     <section class="slide" data-title="Human and AI workflow">
@@ -166,7 +191,7 @@
         <h2>AI prepares the evidence. People keep the decisions.</h2>
         <img class="archify-visual" src="diagrams/prior-authorization-human-ai.visual-check.1440x900.light.png" alt="Archify workflow showing human intake, AI evidence matching, software validation, and human review and submission">
       </div>
-      <div class="citation"><span>9 / 13</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
+      <div class="citation"><span>10 / 14</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
     </section>
 
     <section class="slide" data-title="Proposed support">
@@ -179,7 +204,7 @@
         </div>
         <div class="note coral"><p><strong>Architecture discipline:</strong> Packet assembly may be ordinary automation. Add more agents only if testing shows a clear need.</p></div>
       </div>
-      <div class="citation"><span>10 / 13</span> | Proposed concept, not validated performance. No claim that this design reduces delays until it is tested.</div>
+      <div class="citation"><span>11 / 14</span> | Proposed concept, not validated performance. No claim that this design reduces delays until it is tested.</div>
     </section>
 
     <section class="slide" data-title="Human authority">
@@ -192,7 +217,7 @@
         </div>
         <div class="note"><p><strong>Authority boundary:</strong> The clinic prepares the request. Authorized clinicians and payer reviewers keep their existing decision authority.</p></div>
       </div>
-      <div class="citation"><span>11 / 13</span> | Human review, traceable sources, and fail-closed behavior are required in the demonstration.</div>
+      <div class="citation"><span>12 / 14</span> | Human review, traceable sources, and fail-closed behavior are required in the demonstration.</div>
     </section>
 
     <section class="slide" data-title="Hackathon criteria alignment">
@@ -210,7 +235,7 @@
           </tbody>
         </table>
       </div>
-      <div class="citation"><span>12 / 13</span> | Alignment is provisional until the team builds the prototype and produces test evidence.</div>
+      <div class="citation"><span>13 / 14</span> | Alignment is provisional until the team builds the prototype and produces test evidence.</div>
     </section>
 
     <section class="slide dark" data-title="Cheapest useful test">
@@ -225,7 +250,7 @@
         </ol>
         <div class="decision"><strong>Decision for the team</strong><p>Is this narrow problem useful, measurable, and suitable for a four-week demonstration?</p></div>
       </div>
-      <div class="citation"><span>13 / 13</span> | Next evidence: interviews with 3-5 prior-authorization specialists and one small payer-policy comparison.</div>
+      <div class="citation"><span>14 / 14</span> | Next evidence: interviews with 3-5 prior-authorization specialists and one small payer-policy comparison.</div>
     </section>
   </main>
 
