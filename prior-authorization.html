@@ -95,7 +95,7 @@
     <section class="slide" data-title="Denials and appeals">
       <div class="topline"><span>Denials and appeals</span><span>Increasing denials and limited appeals</span></div>
       <div class="content wide">
-        <div class="heading-row"><h2>Denials are rising, but many adverse decisions are not appealed.</h2><a class="source-link" href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">Open AMA 2024 Survey PDF</a></div>
+        <div class="heading-row"><h2>Physicians report rising denials, and many adverse decisions are not appealed.</h2><a class="source-link" href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">Open AMA 2024 Survey PDF</a></div>
         <p class="source-citation"><strong>Source:</strong> American Medical Association (AMA), <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">2024 Prior Authorization Physician Survey</a>, n=1,000 practicing U.S. physicians.</p>
         <div class="impact-metrics three">
           <article class="impact-metric"><strong>31%</strong><span>reported that PAs are often or always denied (physician perception, not a measured denial rate)</span></article>
@@ -146,7 +146,7 @@
         </div>
         <div class="two">
           <div class="card"><span class="label">Supported</span><h3>Staff face substantial work and uncertainty</h3><p>The survey supports a problem with administrative workload, requirement transparency, and access to electronic prior authorization.</p></div>
-          <div class="card amber"><span class="label">Important detail</span><h3>The 30% figure concerns PA information</h3><p>Nearly one in three reported that PA requirement information in the EHR or e-prescribing system was rarely or never accurate. It does not mean the patient chart itself was inaccurate.</p></div>
+          <div class="card amber"><span class="label">Important detail</span><h3>PA requirement information is often unreliable</h3><p>Nearly one in three (30%) reported that PA requirement information in the EHR or e-prescribing system was rarely or never accurate. It does not mean the patient chart itself was inaccurate.</p></div>
         </div>
       </div>
       <div class="citation"><span>7 / 18</span> | <a href="https://fixpriorauth.org/sites/default/files/2025-02/2024_AMA_Prior-Authorization-Physician_Survey.pdf" target="_blank" rel="noopener">AMA 2024 survey</a>. Prescription and medical-service questions used different respondent groups.</div>
@@ -184,7 +184,7 @@
         <p class="small" style="margin:-4px 0 0"><strong>Payer:</strong> the patient's insurance company or health plan, such as a commercial insurer, a Medicare Advantage plan, or Medicaid. Payers decide which services need PA and approve or deny each request.</p>
         <div class="two">
           <article class="card coral"><span class="label">Problem statement</span><h3>Preparing a PA request can require extensive policy interpretation and record searching</h3><p>Clinic staff must identify the correct payer requirements and find supporting chart evidence. The broader evidence shows that PA is associated with care delays, administrative workload, physician burnout, and added healthcare use. We still need local workflow data to measure how much searching and rework occurs before submission.</p></article>
-          <article class="card"><span class="label">Proposed solution</span><h3>Use one bounded AI agent to prepare a cited, review-ready draft</h3><p>The agent turns the current payer policy into a checklist, matches existing chart evidence to each requirement, and flags missing or uncertain items. Software validates fields and sources. Authorized staff correct, approve, and submit the request.</p></article>
+          <article class="card"><span class="label">Proposed solution</span><h3>Use one bounded AI agent to prepare a cited, review-ready draft</h3><p>The agent turns the current payer policy into a checklist, matches existing chart evidence to each requirement, searches again when evidence is missing or conflicting, and flags remaining gaps. Software validates fields and sources. Authorized staff correct, approve, and submit the request.</p></article>
         </div>
         <div class="note"><p><strong>What it does not solve:</strong> The concept does not decide medical necessity, approve coverage, or guarantee fewer denials. It is designed to reduce avoidable searching and rework during clinic-side preparation.</p></div>
       </div>
@@ -228,7 +228,7 @@
       <div class="topline"><span>Proposed workflow</span><span>Human authority with AI assistance</span></div>
       <div class="content wide">
         <h2>AI prepares the evidence. People keep the decisions.</h2>
-        <img class="archify-visual" src="diagrams/prior-authorization-human-ai.visual-check.1440x900.light.png" alt="Archify workflow showing one AI agent reading payer policy and matching evidence, followed by software validation and human review and submission">
+        <img class="archify-visual" src="diagrams/prior-authorization-human-ai.visual-check.1440x900.light.png" alt="Workflow showing one AI agent reading payer policy and matching evidence, software validation that sends gaps back for another search, and human review and submission">
       </div>
       <div class="citation"><span>12 / 18</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
     </section>
@@ -325,7 +325,7 @@
         <ol class="test-list">
           <li><b>1</b><strong>Choose one service</strong><span>One imaging request or one specialty medication</span></li>
           <li><b>2</b><strong>Compare three public policies</strong><span>Identify shared, different, and unclear requirements</span></li>
-          <li><b>3</b><strong>Use one synthetic patient chart</strong><span>Test whether the system finds evidence and missing items</span></li>
+          <li><b>3</b><strong>Use synthetic patient charts</strong><span>One complete case and one with missing evidence: does the system find evidence and gaps?</span></li>
           <li><b>4</b><strong>Measure the result</strong><span>Time, requirement accuracy, gap detection, and human corrections</span></li>
         </ol>
         <div class="decision"><strong>Decision for the team</strong><p>Is this narrow problem useful, measurable, and suitable for an eight-week hackathon build?</p></div>

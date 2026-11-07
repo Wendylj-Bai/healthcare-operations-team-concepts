@@ -126,3 +126,20 @@ Desktop screenshots (1440×900) of slides 4, 9, 14, and 15 checked visually. Pho
 - Slide 7's "The 30% figure" card refers to a number not shown in that slide's stat row.
 - The deck still uses the 2024 AMA survey; switching to the 2025 survey is an open decision for Wendyl (see above).
 - Untracked Archify sidecars (dark and 2048 PNGs, `visual-check.html`) are left uncommitted.
+
+## Story-alignment pass, slides 1–18 (2026-11-06)
+
+Wendyl asked for a review of narrative consistency from the first slide to the last. The arc (problem evidence 2–8 → solution 9–13 → market reality 14–15 → safeguards and criteria 16–17 → test-first ending 18) holds. Five misalignments were fixed, mostly side effects of earlier updates:
+
+| Slide | Before | After | Why |
+|---|---|---|---|
+| 5 | "Denials are rising, but many adverse decisions are not appealed." | "Physicians report rising denials, and many adverse decisions are not appealed." | The 31% is now labeled as perception, and KFF measured MA denial rates are roughly flat (7.4% → 6.4% → 7.7%, 2022–2024). The heading should not state the trend as measured fact. |
+| 7 | Card title "The 30% figure concerns PA information" | "PA requirement information is often unreliable", with "(30%)" added in the body | The old title referred to a number not shown on the slide. |
+| 9 | Solution: "…matches evidence… and flags missing or uncertain items." | "…searches again when evidence is missing or conflicting, and flags remaining gaps." | Align with the re-check loop on slides 11, 12, 13, and 17. |
+| 12 | Image alt text described a straight-line workflow | Alt text mentions the validation loop that sends gaps back | Screen-reader text should match the new diagram. |
+| 18 | "Use one synthetic patient chart" | "Use synthetic patient charts: one complete case and one with missing evidence" | Slide 17's demo requires a normal case and a missing-evidence case. |
+
+**Noted, not changed (Wendyl's call):**
+- **Slide order:** slides 14–15 (existing tools, adoption theory) sit between the agent design (13) and human authority (16), which splits the solution section. A cleaner flow would be 13 → 16 → 14 → 15 → 17 → 18. Not done because teammates already have the link; reordering changes slide numbers.
+- **Slide 2:** the note says PA is "consistently reported as delaying care", but no care-delay statistic is shown. The AMA survey's care-delay figure could be added.
+- **Survey year:** the deck uses the 2024 AMA survey while slide 14 cites 2026 events. A mentor may ask why the 2025 survey isn't used (see the open item above).
