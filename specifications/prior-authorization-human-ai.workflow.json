@@ -169,7 +169,7 @@
       "id": "validation-retry",
       "from": "validateDraft",
       "to": "matchEvidence",
-      "label": "gaps: search again",
+      "label": "gaps: one re-check",
       "variant": "emphasis",
       "role": "return",
       "toSide": "right"
@@ -196,7 +196,7 @@
       "title": "One AI agent, two preparation tasks",
       "items": [
         "Read the payer policy and build a cited checklist",
-        "Match chart evidence; re-check notes when gaps or conflicts appear"
+        "Match chart evidence; re-check once, then escalate unresolved gaps"
       ]
     },
     {
