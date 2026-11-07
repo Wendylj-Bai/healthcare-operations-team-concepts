@@ -14,7 +14,7 @@ The current recommendation is to validate prior authorization preparation first 
 
 ## Focused presentation
 
-`prior-authorization.html` is a separate twelve-slide presentation focused only on Problem 1. The original three-concept presentation remains in `index.html`.
+`prior-authorization.html` is a separate thirteen-slide presentation focused only on Problem 1. The original three-concept presentation remains in `index.html`.
 
 ## View locally
 
