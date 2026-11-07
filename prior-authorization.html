@@ -21,9 +21,10 @@
     .support{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px}.agent{padding:26px;color:#fff;background:var(--navy);box-shadow:var(--shadow)}.controls-box{padding:26px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.plain-list{display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none}.plain-list li{padding-left:22px;position:relative}.plain-list li::before{position:absolute;left:0;color:var(--teal);font-weight:900;content:"•"}.agent .plain-list li::before{color:#73e1d0}.authority{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:50px}.authority ul{display:grid;gap:16px;margin:18px 0 0;padding:0;list-style:none}.authority li{padding-left:36px;position:relative}.authority .may li::before,.authority .never li::before{position:absolute;left:0;top:-4px;font-size:1.45rem;font-weight:900}.authority .may li::before{color:var(--teal);content:"✓"}.authority .never li::before{color:var(--coral);content:"×"}.authority h3{font-size:1.7rem}.authority .may h3{color:var(--teal)}.authority .never h3{color:var(--coral)}
     .stakeholders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.stakeholder{min-height:150px;padding:18px 20px;border-top:4px solid var(--teal);background:rgba(255,255,255,.8);box-shadow:var(--shadow)}.stakeholder:nth-child(2),.stakeholder:nth-child(5){border-color:var(--coral)}.stakeholder:nth-child(3),.stakeholder:nth-child(6){border-color:var(--amber)}.stakeholder h3{margin-bottom:6px;font-size:1.12rem}.stakeholder p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.35}
     .criteria-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.8);box-shadow:var(--shadow);font-size:clamp(.67rem,.85vw,.8rem);line-height:1.3}.criteria-table th,.criteria-table td{padding:11px 13px;border:1px solid var(--line);vertical-align:top;text-align:left}.criteria-table th{color:#fff;background:var(--navy);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase}.criteria-table td:first-child{width:24%;color:var(--navy)}.criteria-table td:nth-child(2){width:42%}.criteria-table td:nth-child(3){color:var(--muted)}.criteria-table tr:nth-child(even) td{background:rgba(223,243,236,.45)}
+    .comparison-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.82);box-shadow:var(--shadow);font-size:clamp(.65rem,.78vw,.76rem);line-height:1.28}.comparison-table th,.comparison-table td{padding:10px 12px;border:1px solid var(--line);vertical-align:top;text-align:left}.comparison-table th{color:#fff;background:var(--navy);font-size:.62rem;letter-spacing:.045em;text-transform:uppercase}.comparison-table td:first-child{width:15%;font-weight:850}.comparison-table td:nth-child(2){width:19%}.comparison-table td:nth-child(3){width:36%}.comparison-table td:nth-child(4){width:30%;color:var(--muted)}.comparison-table tr:nth-child(even) td{background:rgba(223,243,236,.45)}.comparison-table a{color:var(--teal);font-weight:850}
     .test-list{display:grid;gap:13px;margin:0;padding:0;list-style:none}.test-list li{display:grid;grid-template-columns:48px 280px 1fr;gap:20px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.18)}.test-list b{font-size:1.3rem}.test-list strong{font-size:1.1rem}.test-list span{color:#d5e4ea}.decision{display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:center;padding-top:12px;border-top:2px solid rgba(255,255,255,.3)}.decision strong{color:#86cabe}.decision p{margin:0;font-size:1.12rem;font-weight:760}
     .controls{position:fixed;inset:0;z-index:30;pointer-events:none}.controls button{position:absolute;top:50%;display:grid;place-items:center;width:54px;height:54px;padding:0;border:2px solid rgba(255,255,255,.78);border-radius:50%;color:#fff;background:#092f49;box-shadow:0 8px 24px rgba(9,36,58,.28);font-size:1.45rem;font-weight:900;cursor:pointer;pointer-events:auto;transform:translateY(-50%)}.controls button:hover,.controls button:focus-visible{background:var(--teal);outline:3px solid rgba(255,255,255,.72);outline-offset:3px}.controls button::after{position:absolute;padding:7px 10px;border-radius:6px;color:#fff;background:#092f49;font-size:.68rem;font-weight:900;letter-spacing:.08em;opacity:0;content:attr(data-label)}.controls button:hover::after,.controls button:focus-visible::after{opacity:1}#prev{left:18px}#prev::after{left:64px}#next{right:18px}#next::after{right:64px}.progress{position:fixed;left:0;bottom:0;z-index:40;height:5px;width:100%;background:rgba(255,255,255,.18)}.progress span{display:block;height:100%;background:var(--amber);transition:width .22s}
-    @media(max-width:980px){html,body,.deck,.slide{max-width:100%;overflow-x:hidden}body{overflow-y:auto}.deck{height:auto}.slide{position:relative;display:none;min-height:100vh;padding:22px 22px 24px}.slide.active{display:grid}.content,.stakeholders,.stakeholder{min-width:0}.stakeholder h3,.stakeholder p,h2{max-width:100%;overflow-wrap:anywhere}.topline,.heading-row{flex-direction:column;align-items:flex-start;gap:8px}.three,.two,.impact,.impact-overview,.numbers,.journey,.support,.authority,.stakeholders,.evidence-hero,.impact-metrics,.pressure-grid,.barrier-row{grid-template-columns:1fr}.impact article,.overview-stat,.stakeholder{min-height:auto}.hero-stat{align-items:flex-start}.step{min-height:110px}.prepared{position:static;margin:18px 0 0}.criteria-table,.criteria-table tbody,.criteria-table tr,.criteria-table td{display:block;width:100%}.criteria-table thead{display:none}.criteria-table tr{margin-bottom:14px;padding:12px 14px;border-top:4px solid var(--teal);background:rgba(255,255,255,.8);box-shadow:var(--shadow)}.criteria-table td{display:grid;grid-template-columns:minmax(105px,32%) minmax(0,1fr);gap:10px;padding:7px 0;border:0;border-bottom:1px solid var(--line);background:transparent!important}.criteria-table td:last-child{border-bottom:0}.criteria-table td::before{content:attr(data-label);color:var(--muted);font-size:.62rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase}.criteria-table td:first-child,.criteria-table td:nth-child(2),.criteria-table td:nth-child(3){width:100%}.test-list li{grid-template-columns:40px 1fr}.test-list li span{grid-column:2}.decision{grid-template-columns:1fr}.controls{position:static;display:flex;align-items:center;gap:6px;width:max-content;margin:22px auto 12px;padding:6px;border-radius:999px;background:rgba(9,36,58,.78);pointer-events:auto}.controls button{position:static;display:flex;gap:8px;width:122px;height:42px;padding:0 12px;transform:none}.controls button::after{position:static;padding:0;background:transparent;opacity:1}h1{font-size:2.8rem}h2{font-size:2.25rem}}@media print{@page{size:16in 9in;margin:0}body{overflow:visible;background:#fff}.slide{position:relative;display:grid!important;break-after:page;min-height:9in;opacity:1;visibility:visible;transform:none}.controls,.progress{display:none}}
+    @media(max-width:980px){html,body,.deck,.slide{max-width:100%;overflow-x:hidden}html{height:auto;min-height:100%}body{height:auto;min-height:100vh;overflow-y:auto}.deck{height:auto;min-height:100vh}.slide{position:relative;display:none;min-height:100vh;padding:22px 22px 24px}.slide.active{display:grid}.content,.stakeholders,.stakeholder{min-width:0}.stakeholder h3,.stakeholder p,h2{max-width:100%;overflow-wrap:anywhere}.topline,.heading-row{flex-direction:column;align-items:flex-start;gap:8px}.three,.two,.impact,.impact-overview,.numbers,.journey,.support,.authority,.stakeholders,.evidence-hero,.impact-metrics,.pressure-grid,.barrier-row{grid-template-columns:1fr}.impact article,.overview-stat,.stakeholder{min-height:auto}.hero-stat{align-items:flex-start}.step{min-height:110px}.prepared{position:static;margin:18px 0 0}.criteria-table,.criteria-table tbody,.criteria-table tr,.criteria-table td,.comparison-table,.comparison-table tbody,.comparison-table tr,.comparison-table td{display:block;width:100%}.criteria-table thead,.comparison-table thead{display:none}.criteria-table tr,.comparison-table tr{margin-bottom:14px;padding:12px 14px;border-top:4px solid var(--teal);background:rgba(255,255,255,.8);box-shadow:var(--shadow)}.criteria-table td,.comparison-table td{display:grid;grid-template-columns:minmax(105px,32%) minmax(0,1fr);gap:10px;padding:7px 0;border:0;border-bottom:1px solid var(--line);background:transparent!important}.criteria-table td:last-child,.comparison-table td:last-child{border-bottom:0}.criteria-table td::before,.comparison-table td::before{content:attr(data-label);color:var(--muted);font-size:.62rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase}.criteria-table td:first-child,.criteria-table td:nth-child(2),.criteria-table td:nth-child(3),.comparison-table td:first-child,.comparison-table td:nth-child(2),.comparison-table td:nth-child(3),.comparison-table td:nth-child(4){width:100%}.test-list li{grid-template-columns:40px 1fr}.test-list li span{grid-column:2}.decision{grid-template-columns:1fr}.controls{position:static;display:flex;align-items:center;gap:6px;width:max-content;margin:22px auto 12px;padding:6px;border-radius:999px;background:rgba(9,36,58,.78);pointer-events:auto}.controls button{position:static;display:flex;gap:8px;width:122px;height:42px;padding:0 12px;transform:none}.controls button::after{position:static;padding:0;background:transparent;opacity:1}h1{font-size:2.8rem}h2{font-size:2.25rem}}@media print{@page{size:16in 9in;margin:0}body{overflow:visible;background:#fff}.slide{position:relative;display:grid!important;break-after:page;min-height:9in;opacity:1;visibility:visible;transform:none}.controls,.progress{display:none}}
   </style>
 </head>
 <body>
@@ -36,7 +37,7 @@
         <p class="lead">A focused look at the documented problem, one possible clinic-side bottleneck, and a safe way to test agentic AI.</p>
         <p class="prepared">Prepared by Wendyl Jaca</p>
       </div>
-      <div class="citation"><span>1 / 18</span> | Problem research and concept framing only. Product demand and agentic advantage remain unvalidated.</div>
+      <div class="citation"><span>1 / 19</span> | Problem research and concept framing only. Product demand and agentic advantage remain unvalidated.</div>
     </section>
 
     <section class="slide" data-title="Why this matters">
@@ -51,7 +52,7 @@
         </div>
         <div class="note"><p><strong>What this evidence establishes:</strong> Across 1,000 practicing physicians, prior authorization is consistently reported as delaying care, consuming clinical time, and increasing healthcare use. This is strong evidence of a widespread problem.</p></div>
       </div>
-      <div class="citation"><span>2 / 18</span> | <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf" target="_blank" rel="noopener">AMA 2025 survey</a>, n=1,000 practicing U.S. physicians who complete PAs. Self-reported.</div>
+      <div class="citation"><span>2 / 19</span> | <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf" target="_blank" rel="noopener">AMA 2025 survey</a>, n=1,000 practicing U.S. physicians who complete PAs. Self-reported.</div>
     </section>
 
     <section class="slide" data-title="Clinical impact">
@@ -70,7 +71,7 @@
           <article class="impact-metric"><strong>8%</strong><span>reported disability, permanent damage, congenital anomaly, birth defect, or death</span></article>
         </div>
       </div>
-      <div class="citation"><span>3 / 18</span> | Physician-reported experiences and perceptions from the AMA survey; individual outcomes were not independently verified.</div>
+      <div class="citation"><span>3 / 19</span> | Physician-reported experiences and perceptions from the AMA survey; individual outcomes were not independently verified.</div>
     </section>
 
     <section class="slide" data-title="Physician impact">
@@ -89,7 +90,7 @@
         </div>
         <p class="ai-warning"><strong>Operational meaning:</strong> PA-related administrative work consumes physician and staff capacity that could otherwise support patient care. Our concept aims to reduce preparation work while keeping review and submission with people. If health plans increasingly screen requests with AI, a clinic-side pre-check may help staff catch avoidable gaps before submission. This is a hypothesis to test.</p>
       </div>
-      <div class="citation"><span>4 / 18</span> | Physician-reported workload, burnout, and AI concern. The survey does not isolate documentation as the only cause of burnout.</div>
+      <div class="citation"><span>4 / 19</span> | Physician-reported workload, burnout, and AI concern. The survey does not isolate documentation as the only cause of burnout.</div>
     </section>
 
     <section class="slide" data-title="Denials and appeals">
@@ -110,7 +111,7 @@
         <div class="note coral"><p><strong>Why this matters:</strong> Limited time and low confidence in appeals may allow avoidable denials to stand, even when care cannot wait.</p></div>
         <div class="note"><p><strong>Measured rate for comparison:</strong> Medicare Advantage insurers denied 7.7% of PA requests in 2024, and more than 80% of appealed denials were overturned (<a href="https://www.kff.org/medicare/medicare-advantage-insurers-made-nearly-53-million-prior-authorization-determinations-in-2024/" target="_blank" rel="noopener">KFF</a>). This is a different measure from the survey, so the two should not be combined.</p></div>
       </div>
-      <div class="citation"><span>5 / 18</span> | Survey questions use different respondent groups and time frames. Percentages should not be combined into one rate.</div>
+      <div class="citation"><span>5 / 19</span> | Survey questions use different respondent groups and time frames. Percentages should not be combined into one rate.</div>
     </section>
 
     <section class="slide" data-title="Cost and resource impact">
@@ -130,7 +131,7 @@
         </div>
         <div class="note"><p><strong>Evidence boundary:</strong> These findings show reported time and resource effects. The survey does not calculate one total dollar cost of PA.</p></div>
       </div>
-      <div class="citation"><span>6 / 18</span> | Physician-reported resource and healthcare-use effects; not a direct economic cost estimate.</div>
+      <div class="citation"><span>6 / 19</span> | Physician-reported resource and healthcare-use effects; not a direct economic cost estimate.</div>
     </section>
 
     <section class="slide" data-title="What the survey supports">
@@ -149,7 +150,7 @@
           <div class="card amber"><span class="label">Important detail</span><h3>PA requirement information is often unreliable</h3><p>More than one in four (27%) reported that drug PA requirement information in the EHR or e-prescribing system was rarely or never accurate. It does not mean the patient chart itself was inaccurate.</p></div>
         </div>
       </div>
-      <div class="citation"><span>7 / 18</span> | <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf" target="_blank" rel="noopener">AMA 2025 survey</a>. Prescription and medical-service questions used different respondent groups.</div>
+      <div class="citation"><span>7 / 19</span> | <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf" target="_blank" rel="noopener">AMA 2025 survey</a>. Prescription and medical-service questions used different respondent groups.</div>
     </section>
 
     <section class="slide" data-title="Government evidence">
@@ -174,7 +175,7 @@
         </div>
         <div class="note coral"><p><strong>Design implication:</strong> The agent should not only find missing documents. It should cite the governing requirement, distinguish plan criteria from Medicare rules, preserve the evidence trail, and flag conflicts for human review.</p></div>
       </div>
-      <div class="citation"><span>8 / 18</span> | Official CMS and HHS-OIG evidence; each source covers a defined Medicare population and should not be generalized to all insurers.</div>
+      <div class="citation"><span>8 / 19</span> | Official CMS and HHS-OIG evidence; each source covers a defined Medicare population and should not be generalized to all insurers.</div>
     </section>
 
     <section class="slide" data-title="Problem and proposed solution">
@@ -188,7 +189,7 @@
         </div>
         <div class="note"><p><strong>What it does not solve:</strong> The concept does not decide medical necessity, approve coverage, or guarantee fewer denials. It is designed to reduce avoidable searching and rework during clinic-side preparation.</p></div>
       </div>
-      <div class="citation"><span>9 / 18</span> | Industry-level PA impact is supported by the cited evidence. The specific clinic-side preparation bottleneck and proposed improvement still require workflow data, user interviews, and testing.</div>
+      <div class="citation"><span>9 / 19</span> | Industry-level PA impact is supported by the cited evidence. The specific clinic-side preparation bottleneck and proposed improvement still require workflow data, user interviews, and testing.</div>
     </section>
 
     <section class="slide" data-title="Candidate stakeholders">
@@ -205,7 +206,7 @@
         </div>
         <div class="note"><p><strong>Stakeholder hypothesis:</strong> Interview the daily user first, then confirm who owns the workflow, budget, implementation approval, and success measures.</p></div>
       </div>
-      <div class="citation"><span>10 / 18</span> | Candidate stakeholder map for validation. Exact roles and ownership may differ by clinic, medical group, or hospital.</div>
+      <div class="citation"><span>10 / 19</span> | Candidate stakeholder map for validation. Exact roles and ownership may differ by clinic, medical group, or hospital.</div>
     </section>
 
     <section class="slide" data-title="Possible bottleneck">
@@ -221,7 +222,7 @@
         <p class="flow-note">Today, staff may handle all four steps. The proposed agent produces a readiness summary with policy citations, chart sources, unresolved reasons, and next actions. It re-checks once using alternate terms, dates, and relevant encounters; unresolved gaps go to the appropriate staff member or clinician.</p>
         <div class="hypothesis"><strong>Candidate bottleneck</strong>Staff may lose time translating changing payer policies and searching scattered records for the required evidence. The team still needs to measure how often this causes rework.</div>
       </div>
-      <div class="citation"><span>11 / 18</span> | The clinic controls preparation, not the payer's coverage decision. Use public policies and synthetic patient records for a demo.</div>
+      <div class="citation"><span>11 / 19</span> | The clinic controls preparation, not the payer's coverage decision. Use public policies and synthetic patient records for a demo.</div>
     </section>
 
     <section class="slide" data-title="Human and AI workflow">
@@ -230,7 +231,7 @@
         <h2>AI prepares the evidence. People keep the decisions.</h2>
         <img class="archify-visual" src="diagrams/prior-authorization-human-ai.visual-check.1440x900.light.png" alt="Workflow showing one AI agent reading payer policy and matching evidence, one bounded re-check for missing or conflicting evidence, escalation of unresolved gaps, and human review and submission">
       </div>
-      <div class="citation"><span>12 / 18</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
+      <div class="citation"><span>12 / 19</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
     </section>
 
     <section class="slide" data-title="Agent role and rationale">
@@ -245,7 +246,7 @@
         <div class="note"><p><strong>Where an agent is most likely needed:</strong> Searching and reconciling the chart: deciding where to look, checking dates and durations across scattered notes, resolving conflicts, and escalating uncertainty. Turning the policy into a checklist may work with simpler structured extraction; we would test that. Ordinary software validates required fields, citations, stopping rules, and the audit record. Authorized staff correct, approve, and submit.</p></div>
         <div class="note coral"><p><strong>What we still need to prove:</strong> Does the agent prepare an accurate draft faster or with fewer staff corrections than a simpler search, checklist, or rules-based tool?</p></div>
       </div>
-      <div class="citation"><span>13 / 18</span> | Proposed mechanism and rationale, not validated performance. Test agent necessity against simpler software before expanding the architecture.</div>
+      <div class="citation"><span>13 / 19</span> | Proposed mechanism and rationale, not validated performance. Test agent necessity against simpler software before expanding the architecture.</div>
     </section>
 
     <section class="slide" data-title="Existing tools and policy context">
@@ -270,7 +271,25 @@
         </div>
         <div class="note coral"><p><strong>Candidate difference:</strong> one visible evidence chain from the exact policy clause to the chart document, date, and page, followed by the unresolved reason, next action, and human owner. <strong>Still unproven:</strong> vendors may already offer this privately, and PA staff may not value the extra detail.</p></div>
       </div>
-      <div class="citation"><span>14 / 18</span> | Vendor descriptions come from official vendor pages and remain vendor claims. CMS rule scope comes from the CMS fact sheet.</div>
+      <div class="citation"><span>14 / 19</span> | Vendor descriptions come from official vendor pages and remain vendor claims. CMS rule scope comes from the CMS fact sheet.</div>
+    </section>
+
+    <section class="slide" data-title="Closest competitor comparison">
+      <div class="topline"><span>Competitive review</span><span>Where could our concept fit?</span></div>
+      <div class="content wide">
+        <h2>The closest competitors already address documentation readiness.</h2>
+        <table class="comparison-table">
+          <thead><tr><th>Product</th><th>Target user</th><th>What its official materials describe</th><th>Question for our concept</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Product"><a href="https://www.humatahealth.com/resources/prior-authorization-independent-practices" target="_blank" rel="noopener">Humata</a></td><td data-label="Target user">Health systems; early access for independent and specialty practices</td><td data-label="Verified description">Document upload, payer-policy comparison, completeness grade, missing-record flags, and prepared payer responses</td><td data-label="Question for us">Can our evidence chain and correction workflow provide useful detail that Humata does not already show?</td></tr>
+            <tr><td data-label="Product"><a href="https://www.silnahealth.com/resources/predictive-document-intelligence/" target="_blank" rel="noopener">Silna</a></td><td data-label="Target user">Provider organizations</td><td data-label="Verified description">Checks documents against payer rules and identifies missing, outdated, or inconsistent information before submission</td><td data-label="Question for us">Would policy-clause and chart-page citations improve staff trust or speed beyond Silna's guidance?</td></tr>
+            <tr><td data-label="Product"><a href="https://akasa.com/press/akasa-launches-authorization-advisor" target="_blank" rel="noopener">AKASA</a></td><td data-label="Target user">Hospitals and health systems</td><td data-label="Verified description">Finds relevant EHR documents and helps staff prepare submissions while working in a payer portal</td><td data-label="Question for us">Can a lighter standalone workflow serve practices that cannot support deep EHR integration?</td></tr>
+            <tr><td data-label="Product"><a href="https://www.notablehealth.com/use-cases/authorizations-ai-agent" target="_blank" rel="noopener">Notable</a></td><td data-label="Target user">Larger healthcare organizations</td><td data-label="Verified description">Automates submission and tracking, updates the EHR, connects with payer channels, and synthesizes clinical data</td><td data-label="Question for us">Does a narrow preparation tool offer enough value without full workflow automation?</td></tr>
+          </tbody>
+        </table>
+        <div class="note coral"><p><strong>Candidate position to test:</strong> a transparent readiness report that connects each payer requirement to the chart source, status, unresolved reason, next action, and responsible person. Public pages may not show every competitor feature, so interviews and demonstrations must test whether this difference is real and useful.</p></div>
+      </div>
+      <div class="citation"><span>15 / 19</span> | Official vendor materials reviewed Nov. 6, 2026. Features and performance statements remain vendor claims, not independent comparisons.</div>
     </section>
 
     <section class="slide" data-title="Adoption barriers: our theory">
@@ -285,7 +304,7 @@
         </div>
         <div class="note"><p><strong>Evidence so far:</strong> Only 35% of medical prior authorizations are fully electronic (<a href="https://www.caqh.org/core/priority-topics" target="_blank" rel="noopener">2024 CAQH Index</a>), and only 24% of physicians said their EHR offered electronic PA for prescriptions (AMA, slide 7). This fits an adoption gap but does not explain why.</p></div>
       </div>
-      <div class="citation"><span>15 / 18</span> | Team hypotheses for discussion, not validated findings. To be tested in interviews with 3–5 prior-authorization specialists.</div>
+      <div class="citation"><span>16 / 19</span> | Team hypotheses for discussion, not validated findings. To be tested in interviews with 3–5 prior-authorization specialists.</div>
     </section>
 
     <section class="slide" data-title="Human authority">
@@ -298,7 +317,7 @@
         </div>
         <div class="note"><p><strong>Authority boundary:</strong> The clinic prepares the request. Authorized clinicians and payer reviewers keep their existing decision authority.</p></div>
       </div>
-      <div class="citation"><span>16 / 18</span> | Human review, traceable sources, and fail-closed behavior are required in the demonstration.</div>
+      <div class="citation"><span>17 / 19</span> | Human review, traceable sources, and fail-closed behavior are required in the demonstration.</div>
     </section>
 
     <section class="slide" data-title="Hackathon criteria alignment">
@@ -316,7 +335,7 @@
           </tbody>
         </table>
       </div>
-      <div class="citation"><span>17 / 18</span> | Alignment is provisional until the team builds the prototype and produces test evidence.</div>
+      <div class="citation"><span>18 / 19</span> | Alignment is provisional until the team builds the prototype and produces test evidence.</div>
     </section>
 
     <section class="slide dark" data-title="Cheapest useful test">
@@ -331,7 +350,7 @@
         </ol>
         <div class="decision"><strong>Decision for the team</strong><p>Is this narrow problem useful, measurable, and suitable for an eight-week hackathon build?</p></div>
       </div>
-      <div class="citation"><span>18 / 18</span> | Next evidence: interviews with 3-5 prior-authorization specialists and one small payer-policy comparison.</div>
+      <div class="citation"><span>19 / 19</span> | Next evidence: interviews with 3-5 prior-authorization specialists and one small payer-policy comparison.</div>
     </section>
   </main>
 
