@@ -69,3 +69,33 @@ Desktop screenshots (1440×900) of slides 4, 9, 14, and 15 checked visually. Pho
 ## Follow-up edit (2026-11-06)
 
 - Last slide (18): "suitable for a four-week demonstration?" changed to "suitable for an eight-week hackathon build?". Wendyl confirmed the hackathon build is 8 weeks.
+
+## Changes from second Gemini review (applied 2026-11-06)
+
+**Status:** Applied and published on 2026-11-06 with Wendyl's go-ahead. Slide 13 keeps slides 11–12 unchanged (they still show the agent doing both tasks); the slide 13 note frames policy-to-checklist as possibly simpler software "we would test", not as a decided architecture change. Note links (`.note a`) now use the teal link style.
+
+**How the review was run:** a new Gemini chat with no earlier context, using a strict prompt (list all slide titles first, cite sources, no scores, no rewrites). Gemini could not read slides 9–18 from the live page, so it was given the full slide text. Claude checked its claims against first-party sources. Results are below.
+
+### Applied (verified)
+
+| Slide | Change | Source |
+|---|---|---|
+| 5 | Label the 31% as **physician-reported** ("reported that PAs are often or always denied" is a perception, not an actual denial rate). Add context: Medicare Advantage insurers denied **7.7%** of PA requests in 2024, and more than 80% of appealed denials were overturned. Do not merge the two numbers. | [KFF, MA PA determinations 2024](https://www.kff.org/medicare/medicare-advantage-insurers-made-nearly-53-million-prior-authorization-determinations-in-2024/) |
+| 13 | State plainly which step needs an agent. **Policy → checklist (Task 1)** can be simpler software (structured extraction or rules). **Chart search and reconciliation (Task 2)** is where an agent may add value: choosing what to search, checking dates and durations across scattered notes, resolving conflicts, escalating uncertainty. Keep the existing "What we still need to prove" note. | Gemini review; consistent with Claude's earlier concern that Problem 1 can look like a document pipeline rather than an agent |
+| 14 | Add one line on the HL7 Da Vinci standards (CRD, DTR, PAS): DTR uses FHIR questionnaires with CQL rules to pull **structured** EHR data for payer documentation requirements. **Unstructured** clinical notes remain a gap, which is the concept's possible opening. | [HL7 Da Vinci DTR IG](https://build.fhir.org/ig/HL7/davinci-dtr/) |
+| 14 | Add **Humata Health**. In June 2026 it launched a drag-and-drop upload portal for independent practices, regional health centers, and specialty clinics, very close to this concept's standalone idea and target clinics. | [Humata, independent practices](https://www.humatahealth.com/resources/prior-authorization-independent-practices) |
+| 15 | Add CAQH evidence: only **35%** of medical prior authorizations are fully electronic (X12 278), per the 2024 CAQH Index. This fits better than the AMA's 23% (prescriptions only). Keep both, labeled. | [CAQH CORE priority topics, citing the 2024 CAQH Index](https://www.caqh.org/core/priority-topics) |
+| 15 | Under Compatibility, note that Humata's upload portal is a **signal both ways**: a vendor is betting small clinics will accept uploading records (supports the theory), and the small-clinic gap now has a direct competitor (weakens it). | Same Humata source |
+
+### Do not apply (Gemini was wrong or unverified)
+
+- **"The deck links denials to preparation gaps."** It doesn't. Slide 9 says the concept does not guarantee fewer denials. No change.
+- **HHS-OIG misread:** Gemini said 13% of denials were *because of* extra payer criteria. The OIG found 13% of denials **met Medicare coverage rules**; extra criteria was one reason among several. Slide 8 is already correct.
+- **Cohere Health as a provider-side competitor:** it is mainly payer-side. Do not add it as a competitor.
+- **Epic native PA automation, Basys.ai, Rhyme/Infinx:** not verified. Check the vendors' own sites before adding anything.
+
+### Already handled (no change)
+
+- Manual upload friction and HIPAA/BAA burden: already listed as challenges on slide 15.
+- Hallucination and fail-closed behavior: covered on slides 13 and 16.
+- Synthetic data only: covered on slides 11, 17, and 18.
