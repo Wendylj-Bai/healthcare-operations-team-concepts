@@ -231,17 +231,19 @@
       <div class="citation"><span>12 / 16</span> | Proposed workflow only. The AI agent cannot approve or submit a prior authorization request.</div>
     </section>
 
-    <section class="slide" data-title="Proposed support">
-      <div class="topline"><span>Proposed support</span><span>One bounded agentic role</span></div>
+    <section class="slide" data-title="Agent role and rationale">
+      <div class="topline"><span>Agent role in the proposed workflow</span><span>What it does, how it may help, and why</span></div>
       <div class="content wide">
-        <h2>Use an agent for interpretation and software for control.</h2>
-        <div class="support">
-          <article class="agent"><span class="label" style="color:#9eddd2">Agent role</span><h3>Policy and evidence matching</h3><ul class="plain-list"><li>Read the current payer policy</li><li>Build a case-specific checklist</li><li>Match approved chart evidence to each requirement</li><li>Flag missing or uncertain evidence</li></ul></article>
-          <article class="controls-box"><span class="label">Deterministic controls</span><h3>Validation, stopping rules, and records</h3><ul class="plain-list"><li>Verify required fields</li><li>Stop when evidence is missing</li><li>Keep source citations and an audit record</li><li>Prepare the packet for human review</li><li>Block submission until staff approve</li></ul></article>
+        <h2>Use one agent for variable interpretation and evidence preparation.</h2>
+        <div class="three">
+          <article class="card"><span class="label">Agent role</span><h3>Build a cited checklist and match evidence</h3><p>Read the current payer policy, identify case-specific requirements, locate existing chart support, and flag missing, conflicting, or uncertain information.</p></article>
+          <article class="card coral"><span class="label">How it may help</span><h3>Reduce manual searching and translation</h3><p>Give staff one traceable draft showing each requirement, the supporting evidence, its source, and the gaps that need attention before submission.</p></article>
+          <article class="card amber"><span class="label">Why test an agent</span><h3>The inputs vary across payers and patient records</h3><p>Policies and clinical notes are text-heavy and differently organized. An agent may adapt its search and matching steps while citing its sources and escalating uncertainty.</p></article>
         </div>
-        <div class="note coral"><p><strong>Architecture discipline:</strong> Packet assembly may be ordinary automation. Add more agents only if testing shows a clear need.</p></div>
+        <div class="note"><p><strong>Division of work:</strong> The agent interprets and prepares. Ordinary software validates required fields, citations, stopping rules, and the audit record. Authorized staff correct, approve, and submit.</p></div>
+        <div class="note coral"><p><strong>What we still need to prove:</strong> Does the agent prepare an accurate draft faster or with fewer staff corrections than a simpler search, checklist, or rules-based tool?</p></div>
       </div>
-      <div class="citation"><span>13 / 16</span> | Proposed concept, not validated performance. No claim that this design reduces delays until it is tested.</div>
+      <div class="citation"><span>13 / 16</span> | Proposed mechanism and rationale, not validated performance. Test agent necessity against simpler software before expanding the architecture.</div>
     </section>
 
     <section class="slide" data-title="Human authority">
