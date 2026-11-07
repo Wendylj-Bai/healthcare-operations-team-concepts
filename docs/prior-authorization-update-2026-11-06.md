@@ -65,3 +65,7 @@ The weekly-hours figure and several other percentages did not extract cleanly. R
 ## Verification done
 
 Desktop screenshots (1440×900) of slides 4, 9, 14, and 15 checked visually. Phone-width headless screenshots clip on the right, but original slide 2 clips the same way. This is a headless-Chrome minimum-width artifact, not caused by these edits. Check on a real phone if needed.
+
+## Follow-up edit (2026-11-06)
+
+- Last slide (18): "suitable for a four-week demonstration?" changed to "suitable for an eight-week hackathon build?". Wendyl confirmed the hackathon build is 8 weeks.
